@@ -68,7 +68,7 @@ Vaem.addEvent('myLabel', 7, () => {
 #### 示例
 ```javascript
 Vadm.saveDataToFile({ key: 'value' });
-const data = Vadm.read('key');
+const data = Vadm.readDataToFile('key')
 ```
 
 ### 样式管理 (Vasm)
