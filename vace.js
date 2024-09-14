@@ -362,6 +362,11 @@ var Page = new Vace({
       }
   },
   render: function () {
+      var _this = this;
+      Vadm.write({ key: 'email', value: 'Bob' });
+      Vadm.remove('email');
+      var email = Vadm.read('email');
+      console.log(email);
       this.controls['label'] = Vacm.createWidget('label', {
           id: 'label',
           x: 0,
