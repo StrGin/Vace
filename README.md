@@ -62,13 +62,15 @@ Vaem.addEvent('myLabel', 7, () => {
 #### 方法
 - `saveDataToFile(data)`: 将数据保存到文件。
 - `readDataToFile(keys)`: 从文件中读取数据。
-- `write(data)`: 写入数据。
+- `write({key: string, value: string})`: 写入数据。
 - `read(key)`: 读取指定键的数据。
 
 #### 示例
 ```javascript
-Vadm.saveDataToFile({ key: 'value' });
-const data = Vadm.readDataToFile('key')
+Vadm.write({ key: 'email', value: '2089827698@qq.com' });
+Vadm.remove('email');
+var email = Vadm.read('email');
+console.log(email);
 ```
 
 ### 样式管理 (Vasm)
