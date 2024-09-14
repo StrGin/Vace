@@ -148,13 +148,23 @@ const Page = new VaceComponent({
       id: 'label',
       x: 20,
       y: 20,
-      w: 100,
+      w: 200,
       h: 20,
       text: this.text,
       font: 4163,
       color: this.color,
       contentCenter: true,
-      contentAlign: true
+      contentAlign: true,
+      onClick: () => {
+        if (this.color === "#FFFFFF") {
+          this.color = "#00FFFF";
+          this.text = "hello world";
+        } else {
+          this.color = "#FFFFFF";
+          this.text = "new text";
+        }
+
+      }
     });
 
     this.controls['btn'] = Vacm.createWidget('btn', {
@@ -167,12 +177,6 @@ const Page = new VaceComponent({
     });
 
     return { label: this.controls['label'], btn: this.controls['btn'] };
-  },
-  onReady() {
-    setTimeout(() => {
-      this.color = "#FFFFFF";
-      this.text = 'new text';
-    }, 1000);
   }
 });
 ```
