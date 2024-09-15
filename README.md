@@ -167,42 +167,5 @@ const Page = new Vace({
 });
 ```
 
-### 示例代码
-以下是一个完整的示例代码，展示了如何使用Vace框架创建一个简单的页面
-
-```javascript
-const Page = new Vace({
-  data: {
-    randomNumber: 0,
-    color: "#FFFFFF",
-    text: `Random Number: null`
-  },
-  methods: {
-    generateRandomNumber() {
-      return Vaci.randNum();
-    }
-  },
-  render() {
-    this.controls['label'] = Vacm.createWidget('label', {
-      id: 'label',
-      x: 0,
-      y: 120,
-      w: 200,
-      h: 20,
-      text: this.text,
-      font: 4163,
-      color: this.color,
-      contentCenter: true,
-      contentAlign: true,
-      onClick: () => {
-        this.text =  `Random Number: ${this.generateRandomNumber()}`
-      }
-    });
-
-    return { label: this.controls['label'], btn: this.controls['btn'] };
-  }
-});
-```
-
 ### 备注
 中秋放假刚做的，还不完善））））
