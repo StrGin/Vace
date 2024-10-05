@@ -162,7 +162,7 @@ const Page = new Vace({
       }
     });
 
-    return { label: this.controls['label'], btn: this.controls['btn'] };
+    return { label: this.controls['label'] };
   }
 });
 ```
